@@ -24,6 +24,11 @@ app.get('/Deutsche_Kurz', function(req, res) {
     res.send('The test is tomorrow!!')
 })
 
+app.get('/Claudia', function(req, res) {
+
+    res.send('Me gustó la foto, te ves bonita att: Alguien')
+})
+
 
 app.get('/usuario', verificaToken,function(req, res) {
 
