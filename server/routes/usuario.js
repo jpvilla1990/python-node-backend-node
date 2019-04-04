@@ -14,6 +14,16 @@ app.get('/', function(req, res) {
     res.send('Hello World')
 })
 
+app.get('/Karthik', function(req, res) {
+
+    res.send('Hello Karthik, Hola amigo')
+})
+
+app.get('/Deutsche_Kurz', function(req, res) {
+
+    res.send('The test is tomorrow!!')
+})
+
 
 app.get('/usuario', verificaToken,function(req, res) {
 
