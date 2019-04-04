@@ -1,0 +1,21 @@
+{
+  "name": "node-main-server",
+  "version": "1.0.0",
+  "description": "main server for the microservices structure back end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.22",
+    "mongoose-unique-validator": "^2.0.2",
+    "path": "^0.12.7",
+    "underscore": "^1.9.1"
+  }
+}
