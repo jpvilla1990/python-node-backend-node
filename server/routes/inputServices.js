@@ -2,33 +2,29 @@ const express = require('express');
 const Usuario = require('../models/usuario');
 const bcrypt = require('bcrypt');
 const _ = require('underscore');
-
 const app = express();
+const middlewares = require('../middlewares/autenticacion');
+const {googleReq} = require('./outputServices');
 
-const {verificaToken,verificaAdminRol} = require('../middlewares/autenticacion');
 
 
+app.get('/sendData', async(req, res) =>{
+    //let body =await googleReq().then(async(resp)=> {await console.log(resp)});
+    //res.send('Hello World');
+    if(req.query.address){
+        let address = req.query.address;
+        googleReq(address).then(function(body) {
+            res.send(body);
+        },
+        function(err){ res.send(err);});
+    }
+    
 
-app.get('/', function(req, res) {
-
-    res.send('Hello World')
+    
+    //res.send(body);
 })
 
-app.get('/Karthik', function(req, res) {
-
-    res.send('Hello Karthik, Hola amigo')
-})
-
-app.get('/Deutsche_Kurz', function(req, res) {
-
-    res.send('The test is tomorrow!!')
-})
-
-app.get('/Claudia', function(req, res) {
-
-    res.send('Me gustó la foto, te ves bonita att: Alguien')
-})
-
+ /*
 
 app.get('/usuario', verificaToken,function(req, res) {
 
@@ -146,5 +142,6 @@ if(!usuarioDBBorrado){
 
 })
 
+*/
 
 module.exports = app;
