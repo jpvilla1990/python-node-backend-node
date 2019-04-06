@@ -17,6 +17,8 @@ app.get('/sendData', async(req, res) =>{
             res.send(body);
         },
         function(err){ res.send(err);});
+    }else{
+        res.send('No hay address');
     }
     
 
