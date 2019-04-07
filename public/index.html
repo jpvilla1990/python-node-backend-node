@@ -1,0 +1,27 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Google Sign-In Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+
+    <p>Hallo my friend</p> 
+    
+    <form id="frm1">
+        Write here any address: <input type="text" name="indexSendValue">
+        <input type="button" onclick="sendData()" value="Submit">
+      </form>
+      
+      <script>         
+      function sendData() {
+          let data = document.getElementsByName("indexSendValue")[0].value;            
+          window.location.href = '/sendData?address='+data;
+      }
+   </script>   
+    
+</body>
+</html>
